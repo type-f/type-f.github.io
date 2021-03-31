@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	
+<title>rc4.0</title>
+<link rel="stylesheet" type="text/css" href="button.css">
+
+  </script>	
+</head>
+<body>
+
+
+
+	
+<div id="container" style="width:100%；">
+
+<div id="header">
+<img id="head" width="100%" src="head.jpg"/> </div>
+
+<div id="content" style="height:100%;width:100%;float:left; text-align: center">
+	<p>这里是随缘4.0抽选器~<p/>
+	<p>请点击下面的按钮进行抽选</p>
+	</div>
+<div   id="click" style="text-align: center">
+	<button type="button" class="login-button" onClick="buttoncli()">随缘</button>
+	<br/>
+	<div style="float: left"><img id="image" src="image/0.png"/></div>
+	<div style="float: left"><img id="image2" src="image/0(2).png"/></div>
+	<br/>	
+	</div>
+
+	<script>
+	function randomNum(minNum,maxNum){ 
+    switch(arguments.length){ 
+        case 1: 
+            return parseInt(Math.random()*minNum+1,10); 
+        break; 
+        case 2: 
+            return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+        break; 
+            default: 
+                return 0; 
+            break; 
+    } 
+} 
+	function buttoncli(){
+		var image=document.getElementById("image");
+		var img2=document.getElementById("image2");
+		var ran=Math.floor(randomNum(1,12));
+		image.src="image/"+ran+".png";
+		img2.src="image/"+ran+"(2).png";
+	}
+	</script>
+<div id="footer" style="background-color: aliceblue; clear:both;text-align:center;width:100%;">
+<small>图片@E+    网页@降水率高达F型</small></div>
+
+</div>	
+</body>
+</html>
